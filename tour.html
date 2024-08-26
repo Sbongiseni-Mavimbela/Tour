@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Overview</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .top-bar {
+      background-color: #99cc00;
+      padding: 35px;
+      text-align:right;
+      color: white;
+      display:flex;
+      gap: 35px;
+      cursor:pointer;
+  
+    }
+  
+    .navbar {
+      background-color: #000;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .navbar .links a:hover {
+      color: #bff314;
+
+    }
+
+    .navbar .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .text {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .text-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .text h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .text p {
+      font-size: 24px;
+      margin: 10px 70;
+    }
+
+    .get-in-touch {
+      background-color: #0099cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+    }
+
+    .text-image {
+      background-image: url('/images/Ep1.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+    }
+
+    .Photo {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .Photo-item {
+      width: 30%;
+      height: 250px;
+      background-size: auto;
+      background-position: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <div class="top-bar">
+      <i class="bi bi-instagram"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-envelope"></i>
+        <i class="bi bi-twitter"></i>
+    </div>
+
+    <nav class="navbar">
+      <div class="logo">Journey Beyond</div>
+      <ul class="nav-links">
+        <li><a href="tour.html">Home</a></li>
+        <li><a href="adventure.html">Tour</a></li>
+        <li><a href="cars.html">Car Rentals</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <section class="text">
+    <div class="text-container">
+      <h1>Your Adventure Begins Here.</h1>
+      <p>Build Your Next Holiday Trip With Us</p>
+      <button class="get-in-touch">Get in Touch</button>
+    </div>
+    <div class="text-image"></div>
+  </section>
+
+  <section class="Photo">
+    <div class="Photo-item" style="background-image: url('/images/Lquang.jpg');"></div>
+    <div class="Photo-item" style="background-image: url('/images/Ep3.jpg');"></div>
+    <div class="Photo-item" style="background-image: url('/images/Rpexels.jpg');"></div>
+  </section>
+
+  <footer>
+    <p>&copy; The world is yours to explore.</p>
+  </footer>
+</body>
+
+</html>
