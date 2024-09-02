@@ -10,23 +10,24 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: rgb(123, 108, 108);
     }
 
     .top-bar {
       background-color: #99cc00;
-      padding: 35px;
+      padding: 20px;
       text-align: right;
       color: white;
       display: flex;
-      gap: 35px;
+      justify-content: flex-end;
+      gap: 20px;
       cursor: pointer;
-
     }
 
     .navbar {
       background-color: #000;
       color: white;
-      padding: 15px 20px;
+      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -41,7 +42,7 @@
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 20px;
+      gap: 15px;
     }
 
     .nav-links li {
@@ -52,61 +53,83 @@
       color: rgb(247, 240, 240);
       text-decoration: none;
       font-size: 16px;
+      transition: color 0.3s;
     }
 
     .nav-links a:hover {
       color: #bff314;
-
     }
 
     .services {
-      width: 80%;
+      width: 90%;
       margin: auto;
       text-align: center;
-      padding-top: 0;
+      padding-top: 20px;
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 32px;
       font-weight: 600;
       color: rgb(46, 40, 40);
     }
 
     .rows {
-      margin-top: 1%;
+      margin-top: 20px;
       display: flex;
-      justify-content: space-between;
-      align-items: end;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
+      justify-content: space-around;
       gap: 20px;
       color: white;
     }
 
     .travel-container {
       flex: 1;
-      max-width: 34%;
+      max-width: 45%;
+      background-color: #fff;
+      color: #333;
+      padding: 15px;
+      border-radius: 10px;
       margin-bottom: 20px;
-      padding: 20px 12px;
     }
 
     .travel-container img {
       max-width: 100%;
       height: auto;
       cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
       border-radius: 8px;
     }
-
-    body {
-
-      background-color: rgb(123, 108, 108);
-
+.travel-container :hover{
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+    .travel-container h2 {
+      font-size: 20px;
+      margin: 10px 0;
     }
 
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
+    .travel-container p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    .travel-container .description {
+      font-size: 14px;
+      margin: 10px 0;
+      color: #555;
+    }
+
+    .travel-container .reviews {
+      font-size: 14px;
+      margin: 10px 0;
+      color: #777;
+      display: flex;
+      align-items: center;
+    }
+
+    .travel-container .reviews i {
+      color: #ffcc00;
+      margin-right: 5px;
     }
 
     .travel-container button {
@@ -117,10 +140,46 @@
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
+      border-radius: 5px;
       margin-top: 10px;
+      width: 100%;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 65px;
+    }
+
+    @media (max-width: 768px) {
+      .travel-container {
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .navbar .nav-links li a {
+        font-size: 14px;
+      }
+
+      .travel-container h2 {
+        font-size: 18px;
+      }
+
+      .travel-container p {
+        font-size: 14px;
+      }
+
+      .travel-container button {
+        padding: 10px;
+        font-size: 14px;
+      }
     }
   </style>
-
 </head>
 
 <body>
@@ -138,85 +197,83 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="adventure.html">Tour</a></li>
         <li><a href="cars.html">Car Rentals</a></li>
+        <li><a href="About Us.html">About Us</a></li>
       </ul>
-
     </nav>
   </header>
 
   <section class="services">
-
-    <h1>
-      Our Services
-    </h1>
-
+    <h1>Our Services</h1>
     <div class="rows">
-
       <div class="travel-container">
-
-        <h2>
-          Thule Car Roof Rack
-        </h2>
-
-        <img src="images/pexels-uriel-mont-6271725.jpg" alt="">
-
+        <h2>Thule Car Roof Rack</h2>
+        <img src="images/pexels-uriel-mont-6271725.jpg" alt="Thule Car Roof Rack">
         <p>From R320.00</p>
-
-        <button> Add to Cart </button>
-
+        <p class="description">Perfect for carrying extra luggage, bikes, or skis on your next adventure. Durable, and easy to install.</p>
+        <div class="reviews">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star"></i>
+          (4.0)
+        </div>
+        <button>Add to Cart</button>
       </div>
 
-
       <div class="travel-container">
-
-        <h2>
-          Mercedes Sprinter Bus
-        </h2>
-
-        <img src="images/istockphoto-1629118243-612x612.jpg" alt="">
-
+        <h2>Mercedes Sprinter Bus</h2>
+        <img src="images/istockphoto-1629118243-612x612.jpg" alt="Mercedes Sprinter Bus">
         <p>From R160.00</p>
-
-        <button> Add to Cart </button>
-
+        <p class="description">Ideal for group travel, the Mercedes Sprinter offers comfort, space, and a smooth ride. Seats up to 12 passengers.</p>
+        <div class="reviews">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <i class="bi bi-star"></i>
+          (3.5)
+        </div>
+        <button>Add to Cart</button>
       </div>
 
       <div class="travel-container">
-
-        <h2>
-          SUV & 4x4 Rentals
-        </h2>
-
-        <img src="images/pexels-ahmad-syahrir-107128-761815.jpg" alt="">
-
+        <h2>SUV & 4x4 Rentals</h2>
+        <img src="images/pexels-ahmad-syahrir-107128-761815.jpg" alt="SUV & 4x4 Rentals">
         <p>From R310.00</p>
-
-        <button> Add to Cart </button>
-
+        <p class="description">Explore off-road with our range of SUVs and 4x4s. Built for adventure, these vehicles handle any terrain with ease.</p>
+        <div class="reviews">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          (5.0)
+        </div>
+        <button>Add to Cart</button>
       </div>
-
 
       <div class="travel-container">
-
-        <h2>
-          Mini Bus
-        </h2>
-
-        <img src="images/istockphoto.jpg" alt="">
-
+        <h2>Mini Bus</h2>
+        <img src="images/istockphoto.jpg" alt="Mini Bus">
         <p>From R210.00</p>
-
-        <button> Add to Cart </button>
-
+        <p class="description">Affordable and practical, our Mini Bus rental is perfect for small groups or families. Comfortable seating for up to 8 passengers.</p>
+        <div class="reviews">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star"></i>
+          <i class="bi bi-star"></i>
+          (3.0)
+        </div>
+        <button>Add to Cart</button>
       </div>
-
     </div>
-
   </section>
 
   <footer>
     <p>&copy; The world is yours to explore.</p>
   </footer>
-
 </body>
 
 </html>
